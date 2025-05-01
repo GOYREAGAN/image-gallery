@@ -5,24 +5,64 @@
         <meta name = "viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Goy Reagan">
         <meta name ="keyword" content="images, Gallery">
-        <meta name="description" content="simple website for displaying images">
-        <link rel="stylesheet" type="css/text" href="style.css">
         <title>blues@Manchester</title>
     </head>
     <body>
-        <header>
-            <nav>
-                <ul type="circle">
-                    <li><a href="#about">Manchester City</a></li>
-                    <li><a href="#img">Images</a></li>
-                </ul>
-            </nav>
-        </header>
+        <style>
+            p{
+    text-align: center;
+}
+.intro{
+    text-align: center;
+}
+.intro img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.gallery {
+    column-count: 3;
+    column-gap: 10px;
+    padding: 10px;
+}
+.gallery img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    display: block;
+}
+h1{
+    text-align: center;
+}
+p{
+    font-weight:bold;
+    color:blue;
+}
+.players {
+  display: flex;
+  flex-wrap: wrap; /* Allows the images to wrap onto new rows */
+  justify-content: space-between; /* Ensures even spacing between images */
+}
+
+.players img {
+  width: calc(33.33% - 10px); /* Each image takes 1/3 of the row minus spacing */
+  margin: 5px; /* Adds spacing around images */
+  box-sizing: border-box; /* Includes padding and margins in the width */
+}
+
+        </style>
         <main>
             <section id="about">
-                <header>ManChester City</header>
-                <img src="images\Manchester is blue.jpg" title="blues@ManChester">
-                <tagline><i>The blues @ ManChester</i></tagline>
+                <div class="intro">
+                <img src="images\Manchester is blue.jpg" title="ManChester City" height="250px"><br>
+                <tagline><strong>The blues @ ManChester</strong></tagline>
+                </div>
                 <p>
                     Manchester City Football Club, based in Manchester, England, was founded in 1880 as St. Mark's Church football team.<br>
                      It became Ardwick Association Football Club in 1887 and adopted the name Manchester City in 1894.<br>
@@ -37,14 +77,31 @@
                 </p>
                 <p>
                     Manchester City is now recognized as one of the most successful football clubs in England,<br>
-                     with a passionate fan base and a history of resilience. Are you a fan of their journey?
+                     with a passionate fan base and a history of resilience. Are you a fan?
 
                 </p>
             </section>
-            <section id="img">
+            <section>
                 <header></header>
+                <div class="gallery">
+                    <img src="images\trophies holding.jpg" alt="Major trophies won">
+                    <img src="images\Etihad.jpg" alt="Etihad Stadium">
+                    <img src="images\last season starting 11.jpg" alt="players">
+                    <img src="images\Haaland Trophies.jpg" alt="Haaland">
+                </div>
+            </section>
+            <section>
+                <h1>FAN FAVOURITES</h1>
+                <div class="players">
+                    <img src="images\Erling Haaland.jpg" alt=" image of Haaland" title="Erling Haaland">
+                    <img src="images\Kevin-Debruyne.jpg" alt="image of kdb" title="Kevin De Bruyne">
+                    <img src="images\Ruben-Dias.jpg" alt="image of Ruben-Dias" title="Ruben Diaz">
+                    <img src="images\Jack Grealish(Training).jpg" alt="image of Jack Grealish" title="Jack Grealish">
+                    <img src="images\Phil Foden(Training).jpg" alt="image of Phil Foden" title="Phil Foden">
+                    <img src="images\Bernando Silva.jpg" alt="image of Bernando" title="Bernando Silva">
+                </div>
             </section>
         </main>
     </body>
     <footer></footer>
-</html>
+</ht
