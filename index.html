@@ -6,102 +6,204 @@
         <meta name="author" content="Goy Reagan">
         <meta name ="keyword" content="images, Gallery">
         <title>blues@Manchester</title>
-    </head>
-    <body>
-        <style>
-            p{
+        <link rel="stylesheet" type="css/text" href="style.css">
+<style>
+        /* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #001f3f; /* Deep Blue */
+    color: white;
     text-align: center;
 }
-.intro{
-    text-align: center;
+
+/* Main Container */
+main {
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent overlay */
+    border-radius: 12px;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+/* Header & Tagline */
+.tagline {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1db9fc; /* Man City sky blue */
+}
+
+/* Gallery Styling */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(29, 185, 252, 0.8);
+}
+
+/* Players Section */
+.players {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.players img {
+    width: 200px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.players img:hover {
+    transform: scale(1.1);
+    border: 3px solid #1db9fc;
+}
+
+/* Get in Touch Section */
+#get-in-touch {
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(90deg, #001f3f, #0077b6);
+    color: white;
+    border-radius: 8px;
+}
+
+#get-in-touch a {
+    color: #ffd700;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+#get-in-touch a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background: #222;
+    color: white;
+    padding: 15px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer a {
+    color: #ffd700;
+    margin: 0 10px;
+    font-size: 25px;
 }
 .intro img{
     width: 100%;
     height: auto;
     display: block;
 }
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-.gallery {
-    column-count: 3;
-    column-gap: 10px;
-    padding: 10px;
-}
-.gallery img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    display: block;
-}
-h1{
-    text-align: center;
-}
-p{
-    font-weight:bold;
-    color:blue;
-}
-.players {
-  display: flex;
-  flex-wrap: wrap; /* Allows the images to wrap onto new rows */
-  justify-content: space-between; /* Ensures even spacing between images */
-}
-
-.players img {
-  width: calc(33.33% - 10px); /* Each image takes 1/3 of the row minus spacing */
-  margin: 5px; /* Adds spacing around images */
-  box-sizing: border-box; /* Includes padding and margins in the width */
-}
-
-        </style>
-        <main>
-            <section id="about">
-                <div class="intro">
+    </style>
+</head>
+<body>
+    <main>
+        <section id="about">
+            <div class="intro">
                 <img src="images\Manchester is blue.jpg" title="ManChester City" height="250px"><br>
                 <tagline><strong>The blues @ ManChester</strong></tagline>
-                </div>
+            </div>
                 <p>
                     Manchester City Football Club, based in Manchester, England, was founded in 1880 as St. Mark's Church football team.<br>
-                     It became Ardwick Association Football Club in 1887 and adopted the name Manchester City in 1894.<br>
-                      The club's early years were marked by fluctuating success, including its first major trophy, the FA Cup, in 1904
+                    It became Ardwick Association Football Club in 1887 and adopted the name Manchester City in 1894.<br>
+                    The club's early years were marked by fluctuating success, including its first major trophy, the FA Cup, in 1904
                 </p>
                 <p>
                     Over the decades, Manchester City experienced highs and lows, including relegations and promotions.<br>
                     Notable achievements include winning the Football League First Division championship in 1937 and 1968, <br>
                     as well as the European Cup Winners' Cup in 1970.<br>
-                     The club's fortunes transformed significantly after Sheikh Mansour's acquisition in 2008, <br>
-                     leading to consistent top-tier success and multiple Premier League titles.
+                    The club's fortunes transformed significantly after Sheikh Mansour's acquisition in 2008, <br>
+                    leading to consistent top-tier success and multiple Premier League titles.
                 </p>
                 <p>
-                    Manchester City is now recognized as one of the most successful football clubs in England,<br>
-                     with a passionate fan base and a history of resilience. Are you a fan?
-
+                     Manchester City is now recognized as one of the most successful football clubs in England,<br>
+                    with a passionate fan base and a history of resilience. Are you a fan?
+        
                 </p>
-            </section>
-            <section>
-                <header></header>
-                <div class="gallery">
-                    <img src="images\trophies holding.jpg" alt="Major trophies won">
-                    <img src="images\Etihad.jpg" alt="Etihad Stadium">
-                    <img src="images\last season starting 11.jpg" alt="players">
-                    <img src="images\Haaland Trophies.jpg" alt="Haaland">
-                </div>
-            </section>
-            <section>
-                <h1>FAN FAVOURITES</h1>
-                <div class="players">
-                    <img src="images\Erling Haaland.jpg" alt=" image of Haaland" title="Erling Haaland">
-                    <img src="images\Kevin-Debruyne.jpg" alt="image of kdb" title="Kevin De Bruyne">
-                    <img src="images\Ruben-Dias.jpg" alt="image of Ruben-Dias" title="Ruben Diaz">
-                    <img src="images\Jack Grealish(Training).jpg" alt="image of Jack Grealish" title="Jack Grealish">
-                    <img src="images\Phil Foden(Training).jpg" alt="image of Phil Foden" title="Phil Foden">
-                    <img src="images\Bernando Silva.jpg" alt="image of Bernando" title="Bernando Silva">
-                </div>
-            </section>
-        </main>
-    </body>
-    <footer></footer>
-</ht
+        </section>
+        <section>
+            <header></header>
+            <div class="gallery">
+                <img src="images\trophies holding.jpg" alt="Major trophies won">
+                <img src="images\Etihad.jpg" alt="Etihad Stadium">
+                <img src="images\last season starting 11.jpg" alt="players">
+                <img src="images\Haaland Trophies.jpg" alt="Haaland">
+                <img src="images\Manchester is blue.jpg" alt="ManChester City"><!--Add one more image-->
+                <img src="images\Phil Foden(Player of the match).jpg" alt="Phil Foden">
+            </div>
+        </section>
+        <section>
+            <h1>FAN FAVOURITES</h1>
+            <div class="players">
+                <img src="images\Erling Haaland.jpg" alt=" image of Haaland" title="Erling Haaland">
+                <img src="images\Kevin-Debruyne.jpg" alt="image of kdb" title="Kevin De Bruyne">
+                <img src="images\Ruben-Dias.jpg" alt="image of Ruben-Dias" title="Ruben Diaz">
+                <img src="images\Jack Grealish(Training).jpg" alt="image of Jack Grealish" title="Jack Grealish">
+                <img src="images\Phil Foden(Training).jpg" alt="image of Phil Foden" title="Phil Foden">
+                <img src="images\Bernando Silva.jpg" alt="image of Bernando" title="Bernando Silva">
+                <img src="images\trophies holding.jpg" alt="Major trophies won by city" title="Major Trophies won">
+            </div>
+        </section>
+        <section id="get-in-touch">
+            <img src="mancity.com.png" title="Man City official website" alt="image of man city official website" width="100%" height="auto">
+            <br>
+            <h2>Stay connected with the club</h2>
+            <a href="https://mancity.com" target="_blank" rel="noopener">Visit The ManChester City Official Website</a><br>
+            <a href="https://play.google.com/store/apps/details?id=com.mancity&hl=en-US&pli=1" target="_blank" rel="noopener">Download from PlayStore</a><br>
+            <a href="https://apps.apple.com/us/app/manchester-city-official-app/id416127886" target="_blank" rel="noopener">Download from AppStore</a>
+        </section>
+        <br>
+    <section>
+        <header>
+            <h3>Why download??</h3>
+        </header>
+        <br>
+        <p>
+            Latest News & Videos <br>
+              Get updates on all City teams, including match highlights, Tunnel Cam, and Inside Training.
+                 <br>
+            Matchday Live<br>
+              Follow live match updates, line-ups, stats, and audio commentary.<br>
+            Cityzens Community <br>
+             Join Cityzens for free to access exclusive competitions, rewards, and fan discussions.<br>
+        </p>
+        <br>
+    </section>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</main>
+</body>
+    <footer>
+        <p><i>&copy; Goy Reagan 2025</i></p><br>
+        <a href="https://wa.me/+256761132735" target="_blank" rel="noopener" title="Contact on WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon></a>
+        <a href="https://discord.com/users/goy-reagan" target="_blank" rel="noopener" title="Contact on Discord"><ion-icon name="logo-discord"></ion-icon></a>
+        <a href="https://www.linkedin.com/in/goy-reagan-5b1489356/" target="_blank" rel="noopener" title="Contact on LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+    </footer>
+</html>
